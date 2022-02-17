@@ -39,3 +39,22 @@ services:
     environment:
       - "SPARK_MASTER=spark://spark-master:7077"
       - "SPARK_HOME=/spark"
+
+  database:
+    image: mysql:8
+    restart: always
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+
+    container_name: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_DATABASE = hong_study
+      - MYSQL_ROOT_PASSWORD = iloveicns
+      - tz=Asia/Seoul
+    
+    
+
+  
