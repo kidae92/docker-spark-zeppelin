@@ -52,7 +52,7 @@ services:
       - "3307:3306"
     environment:
       - MYSQL_DATABASE = hong_study
-      - MYSQL_ROOT_PASSWORD = iloveicns
+      - MYSQL_ROOT_PASSWORD = 
       - tz=Asia/Seoul
     
     
